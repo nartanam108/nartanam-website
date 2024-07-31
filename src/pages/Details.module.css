@@ -1,0 +1,72 @@
+.header {
+    color: rgb(192, 30, 30);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.8rem;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .teacherInfo {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .teacherImage {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .description, .danceStyle, .title {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: 0 4in; /* 4-inch margin on both sides */
+    max-width: calc(100% - 8in); /* 4 inches on each side, so 8 inches total */
+  }
+  
+  .description {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .divider {
+    display: block;
+    margin: 1rem auto;
+    width: 50px;
+    height: auto;
+  }
+  
+  .title {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+  }
+  
+  .danceStyle {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .description, .danceStyle, .title {
+      padding: 0 1in; /* 1-inch margin on both sides */
+      max-width: calc(100% - 2in); /* 1 inch on each side, so 2 inches total */
+    }
+  }
+  

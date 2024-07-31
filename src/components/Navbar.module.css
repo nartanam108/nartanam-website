@@ -1,0 +1,140 @@
+.header {
+    display: flex;
+    justify-content: center; /* Center the header content */
+    align-items: center;
+    background: white;
+    padding: 1rem;
+    z-index: 1001; /* Ensure the header stays on top */
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid transparent; /* Invisible by default */
+  }
+  
+  .title {
+    color: rgb(192, 30, 30);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+    font-weight:bold;
+    margin: 0;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.4s;
+    z-index: 1002; /* Ensure the hamburger icon stays on top */
+    position: absolute;
+    left: 1rem; /* Position the hamburger icon on the left */
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #4a4a4a;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  .open .bar {
+    width: 35px; /* Increase the length of the bars when the menu is open */
+  }
+  
+  .open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  .nav {
+    background: white;
+    color: #4a4a4a;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    position: relative;
+  }
+  
+  .ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.3s ease-in-out; /* Slide-in animation */
+  }
+  
+  .ul.open {
+    display: block;
+    transform: translateX(0); /* Slide in from left to right */
+    position: fixed;
+    top: 60px; /* Adjust to push the menu items below the header */
+    left: 0;
+    height: calc(100% - 60px); /* Adjust to take the full height minus the header height */
+    width: 250px; /* Adjust the width as needed */
+    background: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding-top: 20px;
+  }
+  
+  li {
+    display: inline;
+    margin: 0 0.25rem; /* Reduced spacing between items */
+  }
+  
+  .ul.open li {
+    display: block;
+    margin: 1rem 0;
+    text-align: left; /* Align the text to the left for a sidebar menu */
+    padding-left: 1rem; /* Add padding to align text */
+  }
+  
+  a {
+    color: #4a4a4a;
+    text-decoration: none;
+    font-size: 1rem; /* Reduced font size */
+    padding: 0.5rem;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .active {
+    background-color: #6a6767; /* Light gray background for the active link */
+    border-radius: 4px;
+    padding: 0.5rem; /* Ensure padding to cover the link */
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      justify-content: center;
+      border-bottom: 0.05px solid #dcd9d9; /* Visible separator line */
+    }
+  
+    .title {
+      font-size: 1.5rem; /* Smaller font size when minimized */
+    }
+  
+    .ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    li {
+      display: block;
+      margin: 0.5rem 0;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  }
+  

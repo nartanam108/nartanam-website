@@ -1,0 +1,76 @@
+.container {
+    text-align: center;
+  }
+  
+  .blackBand {
+    width: 100%;
+    height: 20vh; /* Adjust height for the black band */
+    margin-top: 2rem;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .logo {
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .overlayText {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem; /* Adjust font size as needed */
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better visibility */
+  }
+  
+  .grayBand {
+    width: 100%;
+    height: 50vh; /* Increase the height of the gray band */
+    background-color: rgb(235, 232, 232);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .poster {
+    align-items: center;
+    max-height: 90%;
+    max-width: 90%; /* Increase the width of the poster */
+    margin-top: 2rem;
+  }
+  
+  /* Media query for medium screens */
+  @media (min-width: 768px) {
+    .blackBand {
+      height: 30vh; /* Adjust height for medium screens */
+    }
+    .grayBand {
+      height: 60vh; /* Adjust height of the gray band for medium screens */
+    }
+    .poster {
+      max-height: 85%;
+      max-width: 85%; /* Adjust width of the poster for medium screens */
+    }
+  }
+  
+  /* Media query for large screens */
+  @media (min-width: 1024px) {
+    .blackBand {
+      height: 40vh; /* Adjust height for large screens */
+    }
+    .grayBand {
+      height: 70vh; /* Adjust height of the gray band for large screens */
+    }
+    .poster {
+      max-height: 80%;
+      max-width: 80%; /* Adjust width of the poster for large screens */
+    }
+  }
+  

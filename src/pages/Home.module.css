@@ -1,0 +1,70 @@
+.headerImageContainer {
+    width: 100%;
+    margin-top: 20px;
+    height: 30vh; /* Default height */
+    background-image: url('C:/Users/TheVillageTech/dance-academy/src/images/022179b4d0d7f6dd085cd16824bf35db.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .content {
+    padding: 1rem;
+    margin-top: 10px; /* Adjust to fit below the navbar */
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace; /* Same font as the navbar */
+  }
+  
+  .title {
+    color: rgb(192, 30, 30);
+    font-size: 2.5rem;
+    margin-bottom: 2rem; /* Space below the title */
+    font-weight: normal; /* Same thickness as the text in the header */
+  }
+  
+  .paragraph {
+    color: rgb(18, 18, 18);
+    font-size: 1.2rem;
+    padding: 0 4in; /* 4-inch margin on both sides */
+    max-width: calc(100% - 8in); /* 4 inches on each side, so 8 inches total */
+    margin-bottom: 2rem; /* Space below the paragraph */
+    font-family: 'Courier New', Courier, monospace; /* Same font as the title */
+  }
+  
+  .button {
+    background-color: rgba(241, 159, 6, 0.879);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .button:hover {
+    background-color: darkorange;
+  }
+  
+  /* Media query for medium screens */
+  @media (min-width: 768px) {
+    .headerImageContainer {
+      height: 40vh; /* Adjust height for medium screens */
+    }
+  }
+  
+  /* Media query for large screens */
+  @media (min-width: 1024px) {
+    .headerImageContainer {
+      height: 50vh; /* Adjust height for large screens */
+    }
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .paragraph {
+      padding: 0 1in; /* 1-inch margin on both sides */
+      max-width: calc(100% - 2in); /* 1 inch on each side, so 2 inches total */
+    }
+  }
+  
