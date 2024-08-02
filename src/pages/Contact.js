@@ -10,6 +10,7 @@ const Contact = () => {
     comment: ''
   });
 
+  const [result, setResult] = useState("");
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
@@ -21,50 +22,34 @@ const Contact = () => {
     }));
   };
 
-  const validateEmail = (email) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
-  };
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+    formData.append("access_key", "490b3e45-0648-46e7-8b85-cfe143a4821b");
 
-    const { firstName, email, comment } = formData;
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
 
-    if (!firstName || !email || !comment) {
-      setError('One of the required fields has not been filled out');
-      return;
-    }
+    const data = await response.json();
 
-    if (!validateEmail(email)) {
-      setError('Invalid email address');
-      return;
-    }
-
-    try {
-      const response = await fetch('http://localhost:5000/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
+    if (data.success) {
+      setSuccess('Form submitted successfully');
+      setError('');
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        comment: ''
       });
-
-      if (response.ok) {
-        setSuccess('Form submitted successfully');
-        setError('');
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          comment: ''
-        });
-      } else {
-        setError('Error submitting form');
-        setSuccess('');
-      }
-    } catch (error) {
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
       setError('Error submitting form');
       setSuccess('');
     }
@@ -76,7 +61,7 @@ const Contact = () => {
       <p className={styles.indication}><span className={styles.asterisk}>*</span> Indicates required field</p>
       {error && <p className={styles.error}>{error}</p>}
       {success && <p className={styles.success}>{success}</p>}
-      <form className={styles.form} onSubmit={handleSubmit}>
+      <form className={styles.form} onSubmit={onSubmit}>
         <div className={styles.formGroup}>
           <label htmlFor="firstName">First Name<span className={styles.asterisk}>*</span></label>
           <input
@@ -131,6 +116,7 @@ const Contact = () => {
         </div>
         <button type="submit" className={styles.submitButton}>Submit</button>
       </form>
+      {result && !success && <p>{result}</p>}
     </div>
   );
 };

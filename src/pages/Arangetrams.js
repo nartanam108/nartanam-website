@@ -8,7 +8,7 @@ import styles from './Arangetrams.module.css';
 const dancers = [
   { name: 'Diya Nuka', thumbnail: '/images/diya.png', brochure: '/pdfs/diya.pdf' },
   { name: 'Hamsika Totapally', thumbnail: '/images/hamsika.png', brochure: '/pdfs/hamsika.pdf' },
-  // Add more dancers as needed
+  { name: 'Mrunmayi Warade', thumbnail: '/images/mrunmayi.jpeg', brochure: '/pdfs/mrunmayi.pdf' },
 ];
 
 const Arangetrams = () => {
