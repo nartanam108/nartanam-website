@@ -18,8 +18,9 @@ const App = () => {
         <Route path="/siddhendra-aradhana" element={<SiddhendraAradhana />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/arangetrams" element={<Arangetrams />} />
+        <Route path="/arangetrams/:id" element={<Arangetrams />} />
         <Route path="/rangaanubhavam-2023" element={<Rangaanubhavam2023 />} />
-       </Routes>
+      </Routes>
     </Router>
   );
 };
