@@ -9,6 +9,8 @@ const dancers = [
   { name: 'Diya Nuka', thumbnail: '/images/diya.png', brochure: '/pdfs/diya.pdf' },
   { name: 'Hamsika Totapally', thumbnail: '/images/hamsika.png', brochure: '/pdfs/hamsika.pdf' },
   { name: 'Mrunmayi Warade', thumbnail: '/images/mrunmayi.jpeg', brochure: '/pdfs/mrunmayi.pdf' },
+  { name: 'Ashritha Kota', thumbnail: '/images/ashi1.jpeg', brochure: '/pdfs/ashi.pdf' },
+  { name: 'Ananya Kompella', thumbnail: '/images/ananya.png', brochure: '/pdfs/ananya.pdf' },
 ];
 
 const Arangetrams = () => {
