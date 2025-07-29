@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Rangaanubhavam.module.css';
 import logo from '../images/nartanam.jpg'; // Adjust the path to your logo
-import poster from '../images/whatsapp-image-2023-05-07-at-3-19-19-am_orig.jpeg'; // Adjust the path to your poster
+import poster from '../images/rangaanubhavam.jpg'; // Adjust the path to your poster
 
 const Rangaanubhavam = () => {
   return (

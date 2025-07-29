@@ -31,7 +31,7 @@ const Navbar = () => {
         <li><NavLink to="/siddhendra-aradhana" activeClassName={styles.active} onClick={closeMenu}>Siddhendra Aradhana</NavLink></li>
         <li><NavLink to="/contact" activeClassName={styles.active} onClick={closeMenu}>Contact</NavLink></li>
         <li><NavLink to="/arangetrams" activeClassName={styles.active} onClick={closeMenu}>Solo Debuts</NavLink></li>
-        <li><NavLink to="/rangaanubhavam-2023" activeClassName={styles.active} onClick={closeMenu}>Rangaanubhavam 2023</NavLink></li>
+        <li><NavLink to="/rangaanubhavam-2023" activeClassName={styles.active} onClick={closeMenu}>Rangaanubhavam 2025</NavLink></li>
         </ul>
     </nav>
   );
