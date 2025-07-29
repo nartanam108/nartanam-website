@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
-import logo from '/Users/ashrithakota/nartanam_website/nartanam-website/src/images/022179b4d0d7f6dd085cd16824bf35db.jpg';
+import logo from '../images/nataraja.jpg';
 const Home = () => {
   return (
     <div>
