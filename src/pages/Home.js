@@ -5,9 +5,7 @@ import logo from '../images/nataraja.jpg';
 const Home = () => {
   return (
     <div>
-      <div className={styles.headerImageContainer}>
-      <img src={logo} alt="logo" className={styles.logo} />
-      </div>
+      <div className={styles.headerImageContainer}></div>
       <div className={styles.content}>
         <h1 className={styles.title}>NARTANAM DANCE ACADEMY</h1>
         <p className={styles.paragraph}>
