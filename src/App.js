@@ -5,7 +5,7 @@ import Details from './pages/Details';
 import SiddhendraAradhana from './pages/SiddhendraAradhana';
 import Contact from './pages/Contact';
 import Arangetrams from './pages/Arangetrams';
-import Rangaanubhavam2023 from './pages/Rangaanubhavam';
+import Rangaanubhavam from './pages/Rangaanubhavam';
 import Navbar from './components/Navbar';
 
 const App = () => {
