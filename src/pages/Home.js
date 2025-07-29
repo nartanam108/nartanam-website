@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
-
+import logo from '../images/nartanam.jpg';
 const Home = () => {
   return (
     <div>
-      <div className={styles.headerImageContainer}></div>
+      <div className={styles.headerImageContainer}>
+      <img src={logo} alt="logo" className={styles.logo} />
+      </div>
       <div className={styles.content}>
         <h1 className={styles.title}>NARTANAM DANCE ACADEMY</h1>
         <p className={styles.paragraph}>
