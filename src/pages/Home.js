@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
-import logo from '../images/nataraja.jpg';
 const Home = () => {
   return (
     <div>
